@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Analysis App</title>
+</head>
+<body>
+  <h1>Data Analysis App</h1>
+
+  <label>Enter grades (comma-separated):</label><br><br>
+  <input type="text" id="gradesInput" placeholder="90,85,88">
+  <br><br>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function calculate() {
+      let grades = document.getElementById("gradesInput").value
+        .split(",")
+        .map(Number);
+
+      grades.sort((a, b) => a - b);
+
+      let maximum = Math.max(...grades);
+      let minimum = Math.min(...grades);
+      let average = grades.reduce((a, b) => a + b, 0) / grades.length;
+
+      document.getElementById("output").textContent =
+        grades + "\n" +
+        "Maximum grade = " + maximum + "\n" +
+        "Minimum grade = " + minimum + "\n" +
+        "Average grade = " + average.toFixed(2);
+    }
+  </script>
+</body>
+</html>
