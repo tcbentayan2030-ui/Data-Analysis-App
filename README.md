@@ -2,4 +2,4 @@
 The user inputs any amount of test scores and the app will sort it in ascending order and display the average, the highest, and the lowest score.
 This can be used by students or teachers who wants to keep track of their scores or their students' scores.
 
-The original program was written using Python, but was adapted to JavaScript for deployment. :)
+The original program was written using Python, but was adapted to JavaScript for deployment.
